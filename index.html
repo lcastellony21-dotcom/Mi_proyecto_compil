@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Buscador estilo Google</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Fuse.js para búsqueda difusa -->
+  <script defer src="https://cdn.jsdelivr.net/npm/fuse.js@7"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Buscador estilo Google</h1>
+    <div class="search-box">
+      <input id="q" type="text" placeholder="Escribe tu búsqueda..." autocomplete="off" />
+      <ul id="suggestions" class="suggestions" hidden></ul>
+    </div>
+    <p class="hint">
+      Simulación de buscador con <code>HTML + CSS + JS</code>, desplegado en <strong>Vercel</strong>.
+    </p>
+  </main>
+</body>
+</html>

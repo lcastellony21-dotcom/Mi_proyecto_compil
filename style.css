@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 584px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 90px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  color: #4285f4;
+  letter-spacing: -5px;
+}
+
+/* Letra G */
+h1::first-letter {
+  color: #4285f4;
+}
+
+/* Simulamos las letras de Google con spans si quisieras hacerlo más preciso */
+.google-logo {
+  font-size: 90px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  letter-spacing: -5px;
+}
+
+.google-logo .g1 { color: #4285f4; }
+.google-logo .o1 { color: #ea4335; }
+.google-logo .o2 { color: #fbbc05; }
+.google-logo .g2 { color: #4285f4; }
+.google-logo .l { color: #34a853; }
+.google-logo .e { color: #ea4335; }
+
+.search-box {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+#q {
+  width: 100%;
+  max-width: 584px;
+  height: 44px;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  padding: 0 45px 0 16px;
+  font-size: 16px;
+  outline: none;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%23757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>') no-repeat right 14px center;
+  background-size: 20px 20px;
+}
+
+#q:hover {
+  border-color: #dfe1e5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#q:focus {
+  border-color: #4285f4;
+  box-shadow: 0 2px 8px rgba(66,133,244,0.3);
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #dfe1e5;
+  border-top: none;
+  border-radius: 0 0 24px 24px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  list-style: none;
+}
+
+.suggestions li {
+  padding: 12px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #f8f9fa;
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+}
+
+.suggestions li:hover {
+  background-color: #f8f9fa;
+}
+
+.suggestions li[aria-selected="true"] {
+  background-color: #eef2ff;
+}
+
+.suggestions li:last-child {
+  border-bottom: none;
+  border-radius: 0 0 24px 24px;
+}
+
+.hint {
+  display: none; /* Ocultar el párrafo de simulación */
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 60px;
+    letter-spacing: -3px;
+  }
+  
+  .container {
+    padding: 20px 16px;
+  }
+  
+  #q {
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 50px;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+  }
+}
